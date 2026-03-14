@@ -1,68 +1,82 @@
+"use client";
+
 import Image from "next/image";
-import styles from "./page.module.css";
+import DataChart from "../components/DataChart";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="bg-gray-100 min-h-screen">
+
+      <section className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 p-10">
+
+        <img
+          src="/FPHAKIM.jpeg"
+          className="w-48 h-48 rounded-full object-cover shadow-lg"
         />
-        <div className={styles.intro}>
-          <h1>Hello world</h1>
-          <h3>halo dunia</h3>
-          <h1>TEST DEPLOY NEW</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+        <div>
+          <h1 className="text-4xl text-black font-bold mb-4">
+            Hakim Al Munawar
+          </h1>
+
+
+          <p className="text-black-600 mb-6">
+            Mahasiswa Teknik Informatika yang tertarik pada analisis data,
+            visualisasi informasi, dan data storytelling untuk memahami
+            fenomena masyarakat melalui data.
           </p>
+
+          <div className="flex gap-4">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+              Hello Everyone
+            </button>
+
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+              Download CV
+            </button>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+      </section>
+
+      <section className="max-w-6xl mx-auto bg-white p-8 rounded-xl shadow-lg mb-10">
+        <h2 className="text-2xl font-semibold mb-6 text-black">
+          Learning Progress
+        </h2>
+
+        <DataChart />
+
+        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-10">
+
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-3 text-black">
+              What I Do
+            </h3>
+
+            <ul className="text-black-600 space-y-2">
+              <li>Analisis dataset sederhana</li>
+              <li>Membuat visualisasi data</li>
+              <li>Mengolah data menjadi insight</li>
+              <li>Menjelaskan data melalui tulisan</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-3 text-black">
+              Why Data Matters
+            </h3>
+
+            <p className="text-black-600">
+              Data membantu memahami berbagai fenomena sosial secara lebih objektif.
+              Dengan analisis dan visualisasi yang tepat, informasi dapat disampaikan
+              dengan lebih jelas dan mudah dipahami oleh masyarakat.
+            </p>
+          </div>
+
+        </section>
+
+      </section>
+
+    </main>
   );
 }
