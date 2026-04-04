@@ -19,17 +19,48 @@ ChartJS.register(
   Legend
 );
 
-export default function DataChart() {
+export default function DataChart({ data }) {
 
-  const data = {
-    labels: ["Web Dev", "Data Analysis", "Visualization", "Writing"],
+  // HANDLE KALAU DATA BELUM ADA
+  if (!data || Object.keys(data).length === 0) {
+    return <p>Loading chart...</p>;
+  }
+
+  const chartData = {
+    labels: Object.keys(data),
     datasets: [
       {
-        label: "Skill Progress",
-        data: [70, 50, 40, 60]
+        label: "Total Populasi",
+        data: Object.values(data),
+        backgroundColor: "#3B82F6",
+        borderRadius: 6,
       }
     ]
   };
 
-  return <Bar data={data} />;
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          color: "#111",
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: "#111",
+        },
+      },
+      x: {
+        ticks: {
+          color: "#111",
+        },
+      },
+    },
+  };
+
+  return <Bar data={chartData} options={options} />;
 }

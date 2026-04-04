@@ -1,7 +1,7 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
-import DataChart from "../components/DataChart";
+import SkillChart from "../components/SkillChart";
 
 export default function Home() {
   return (
@@ -27,14 +27,24 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            <button onClick={() => alert("Selamat datang di web ini")}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
               Hello Everyone
             </button>
 
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
               Download CV
             </button>
+
+            <Link
+              href="/countries"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+            >
+              Data Example
+            </Link>
+
           </div>
+
         </div>
 
       </section>
@@ -44,7 +54,7 @@ export default function Home() {
           Learning Progress
         </h2>
 
-        <DataChart />
+        <SkillChart />
 
         <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-10">
 
