@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="min-h-screen bg-white text-black flex items-center">
+    <main className="min-h-screen bg-gray text-black flex items-center">
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6">
 

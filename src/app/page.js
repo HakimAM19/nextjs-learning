@@ -32,7 +32,10 @@ export default function Home() {
               Hello Everyone
             </button>
 
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            <button
+              onClick={() => window.open("/CV-HakimAlMunawar.pdf")}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+            >
               Download CV
             </button>
 
