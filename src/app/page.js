@@ -39,11 +39,10 @@ export default function Home() {
               Download CV
             </button>
 
-            <Link
-              href="/countries"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-            >
-              Data Example
+            <Link href="/project">
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg">
+                View Projects
+              </button>
             </Link>
 
           </div>
